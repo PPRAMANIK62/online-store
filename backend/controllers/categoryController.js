@@ -66,7 +66,7 @@ const listCategory = asyncHandler(async (req, res) => {
 
 const getCategory = asyncHandler(async (req, res) => {
   try {
-    const category = await Category.findById({ _id: req.params.categoryId });
+    const category = await Category.findById({ _id: req.params.id });
     res.status(200).json(category);
   } catch (error) {
     console.error(error);
