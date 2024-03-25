@@ -128,7 +128,7 @@ const fetchAllProducts = asyncHandler(async (req, res) => {
       .limit(12)
       .sort({ createAt: -1 });
 
-    res.status(200).json({ products });
+    res.status(200).json(products);
   } catch (error) {
     console.error(error);
     return res.status(404).json(error.message);
